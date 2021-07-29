@@ -1,0 +1,262 @@
+
+add_namespace = Zombievereinigung
+
+country_event = {
+	id = Zombievereinigung.1
+	title = "Zombievereinigung.1.name"
+	desc = "Zombievereinigung.1.desc"
+	picture = GFX_news_event_003
+	fire_only_once = yes
+
+	trigger = {
+		tag=SOV
+		has_capitulated = no
+		SOV={ has_war_with = ZOM }
+		ENG={ has_war_with = ZOM }
+		SOV={ NOT = { is_in_faction_with = ENG }}
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = Zombievereinigung.a
+		ai_chance = {
+			factor = 75
+			}
+		SOV = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { is_in_faction_with = ENG }
+						has_war_with = ZOM
+					}
+				}
+			}
+			ENG = { add_to_Faction=SOV}
+
+		}		
+	}
+	option = {
+		name = Zombievereinigung.b	
+		ai_chance = { 
+			factor = 25 
+		}		
+	}
+}
+
+country_event = {
+	id = Zombievereinigung.2
+	title = "Zombievereinigung.1.name"
+	desc = "Zombievereinigung.1.desc"
+	picture = GFX_news_event_003
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_capitulated = no
+		ENG={ has_war_with = ZOM }
+		GER={ NOT = { is_in_faction_with = ENG }}
+		GER={ NOT = { has_war_with = ENG }}
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = Zombievereinigung.a
+				ai_chance = {
+			factor = 75
+			}
+		GER = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { is_in_faction_with = ENG }
+						has_war_with = ZOM
+					}
+				}
+			}
+			ENG = { add_to_Faction=GER}
+
+		}		
+	}
+	option = {
+		name = Zombievereinigung.b	
+		ai_chance = { 
+			factor = 25 
+		}		
+	}
+}
+
+country_event = {
+	id = Zombievereinigung.3
+	title = "Zombievereinigung.1.name"
+	desc = "Zombievereinigung.1.desc"
+	picture = GFX_news_event_003
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITA
+		has_capitulated = no
+		ENG={ has_war_with = ZOM }
+		ITA={ NOT = { is_in_faction_with = ENG }}
+		ITA={ NOT = { has_war_with = ENG }}
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = Zombievereinigung.a
+		ai_chance = {
+			factor = 75
+			}		
+		ITA = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { is_in_faction_with = ENG }
+						has_war_with = ZOM
+					}
+				}
+			}
+			ENG = { add_to_Faction=ITA}
+
+		}		
+	}
+	option = {
+		name = Zombievereinigung.b
+		ai_chance = { 
+			factor = 25 
+		}		
+	}
+}
+country_event = {
+	id = Zombievereinigung.4
+	title = "Zombievereinigung.1.name"
+	desc = "Zombievereinigung.1.desc"
+	picture = GFX_news_event_003
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+		has_capitulated = no
+		ENG={ has_war_with = ZOM }
+		JAP={ NOT = { is_in_faction_with = ENG }}
+		JAP={ NOT = { has_war_with = ENG }}
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = Zombievereinigung.a	
+				ai_chance = {
+			factor = 75
+			}
+		JAP = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { is_in_faction_with = ENG }
+						has_war_with = ZOM
+					}
+				}
+			}
+			ENG = { add_to_Faction=JAP}
+
+		}		
+	}
+	option = {
+		name = Zombievereinigung.b
+		ai_chance = { 
+			factor = 25 
+		}		
+	}
+}
+country_event = {
+	id = Zombievereinigung.5
+	title = "Zombievereinigung.1.name"
+	desc = "Zombievereinigung.1.desc"
+	picture = GFX_news_event_003
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		has_capitulated = no
+		CHI={ has_war_with = ZOM }
+		ENG={ has_war_with = ZOM }
+		CHI={ NOT = { is_in_faction_with = ENG }}
+		CHI={ NOT = { has_war_with = ENG }}
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = Zombievereinigung.a
+		ai_chance = {
+			factor = 75
+			}		
+		CHI = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { is_in_faction_with = ENG }
+						has_war_with = ZOM
+					}
+				}
+			}
+			ENG = { add_to_Faction=CHI}
+
+		}		
+	}
+	option = {
+		name = Zombievereinigung.b	
+		ai_chance = { 
+			factor = 25 
+		}		
+	}
+}
+
+country_event = {
+	id = Zombievereinigung.6
+	title = "Zombievereinigung.1.name"
+	desc = "Zombievereinigung.1.desc"
+	picture = GFX_news_event_003
+	
+	trigger = {
+		has_capitulated = no
+		NOT={ tag=ITA}
+		NOT={ tag=SOV}
+		NOT={ tag=CHI}
+		NOT={ tag=GER}
+		NOT={ tag=JAP}
+		ENG={ has_war_with = ZOM }
+		FROM={ has_war_with = ZOM }
+		FROM={ NOT = { is_in_faction_with = ENG }}
+		FROM={ NOT = { has_war_with = ENG }}
+
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = Zombievereinigung.a
+				ai_chance = {
+			factor = 75
+			}
+		FROM = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { is_in_faction_with = ENG }
+						has_war_with = ZOM
+					}
+				}
+			}
+			ENG = { add_to_Faction=FROM}
+
+		}		
+	}
+	option = {
+		name = Zombievereinigung.b	
+		ai_chance = { 
+			factor = 25 
+		}		
+	}
+}
+
+
+
+

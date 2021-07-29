@@ -1,0 +1,208 @@
+
+add_namespace = Zombielanding
+
+country_event = {
+	id = Zombielanding.1
+	title = "Zombielanding.1.name"
+	desc = "Zombielanding.1.desc"
+	hidden =yes
+
+
+	trigger = {
+		has_capitulated = no
+		tag = ZOM
+		ZOM= {
+			AND = {
+				GER = { exists = no}
+				FRA = { exists = no }
+				SOV = { exists = no }
+				NOT={ ENG = { exists = no} }
+			}
+			OR = {
+				GER ={ has_capitulated = yes}
+				FRA ={ has_capitulated = yes}
+				SOV ={ has_capitulated = yes}
+				NOT={ ENG = { has_capitulated = yes } }
+			}
+		}
+	}
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = england
+		load_oob = "ZOM_england"	
+	}
+}
+country_event = {
+	id = Zombielanding.2
+	title = "Zombielanding.2.name"
+	desc = "Zombielanding.2.desc"
+	hidden=yes
+
+	trigger = {
+		has_capitulated = no
+		tag = ZOM
+		ZOM= {
+			AND = {
+				ENG = { exists = no}
+				NOT={ IRE = { exists = no} }
+			}
+			OR = {
+				ENG ={ has_capitulated = yes}
+				NOT={ IRE = { has_capitulated = yes } }
+			}
+		}
+	}
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = ireland
+		load_oob = "ZOM_irland"	
+	}
+}
+
+country_event = {
+	id = Zombielanding.3
+	title = "Zombielanding.3.name"
+	desc = "Zombielanding.3.desc"
+	hidden =yes
+
+	trigger = {
+		has_capitulated = no
+		tag = ZOM
+		ZOM= {
+			AND = {
+				GER = { exists = no}
+				FRA = { exists = no }
+				SOV = { exists = no }
+				ENG = { exists = no }
+				SPR = { exists = no }
+				NOT={ CAN = { exists = no} }
+			}
+			OR = {
+				GER ={ has_capitulated = yes}
+				FRA ={ has_capitulated = yes}
+				SOV ={ has_capitulated = yes}
+				SPR ={ has_capitulated = yes}
+				NOT={ CAN = { has_capitulated = yes } }
+			}
+		}
+	}
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = america
+		load_oob = "ZOM_amerika"	
+	}
+}
+country_event = {
+	id = Zombielanding.4
+	title = "Zombielanding.4.name"
+	desc = "Zombielanding.4.desc"
+	hidden =yes
+
+	trigger = {
+		has_capitulated = no
+		tag = ZOM
+		ZOM= {
+			AND = {
+				CHI = { exists = no}
+				NOT={ JAP = { exists = no} }
+			}
+			OR = {
+				CHI ={ has_capitulated = yes}
+				NOT={ JAP = { has_capitulated = yes } }
+			}
+		}
+	}
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = america
+		load_oob = "ZOM_japan"	
+	}
+}
+
+country_event = {
+	id = Zombielanding.5
+	title = "Zombielanding.5.name"
+	desc = "Zombielanding.5.desc"
+	hidden =yes
+
+	trigger = {
+		has_capitulated = no
+		tag = ZOM
+		ZOM= {
+			AND = {
+				SIA = { exists = no}
+				NOT={ AST = { exists = no} }
+			}
+			OR = {
+				SIA ={ has_capitulated = yes}
+				NOT={ AST = { has_capitulated = yes } }
+			}
+		}
+	}
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = america
+		load_oob = "ZOM_australien"	
+	}
+}
+
+country_event = {
+	id = Zombielanding.6
+	title = "Zombielanding.6.name"
+	desc = "Zombielanding.6.desc"
+	hidden =yes
+
+	trigger = {
+		has_capitulated = no
+		tag = ZOM
+		ZOM= {
+			AND = {
+				AST = { exists = no}
+				NOT={ NZL = { exists = no} }
+			}
+			OR = {
+				AST ={ has_capitulated = yes}
+				NOT={ NZL = { has_capitulated = yes } }
+			}
+		}
+	}
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = america
+		load_oob = "ZOM_neuseeland"	
+	}
+}
+
+country_event = {
+	id = Zombielanding.7
+	title = "Zombielanding.7.name"
+	desc = "Zombielanding.7.desc"
+	hidden =yes
+
+	trigger = {
+		has_capitulated = no
+		tag = ZOM
+		ZOM= {
+			AND = {
+				CHI = { exists = no}
+				NOT={ PHI = { exists = no} }
+			}
+			OR = {
+				CHI ={ has_capitulated = yes}
+				NOT={ PHI = { has_capitulated = yes } }
+			}
+		}
+	}
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = america
+		load_oob = "ZOM_philippinien"
+	}
+}

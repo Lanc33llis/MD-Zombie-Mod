@@ -1,0 +1,21 @@
+
+add_namespace = moreZombies
+
+country_event = {
+	id = moreZombies.1
+	title = "moreZombies.1.name"
+	desc = "moreZombies.1.desc"
+	hidden =yes
+
+	trigger = {
+		has_capitulated = no
+		tag = ZOM
+		has_army_manpower = { size < 6000000 }
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = england
+		load_oob = "ZOM_homeland"	
+	}
+}
