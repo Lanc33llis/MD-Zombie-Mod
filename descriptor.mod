@@ -1,5 +1,5 @@
 version="2.0"
-name="Doomsday Series: Zombies modern Day Submod Dev by Lanc3"
+name="Doomsday Series: Zombies modern Day Submod Dev by Lan3 created by daniel"
 dependencies={
 	"Millennium Dawn: Modern Day Mod"
 }
